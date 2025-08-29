@@ -1,0 +1,9 @@
+.sliderimg {
+  height: 530px;
+  object-fit: cover;
+}
+
+.headlineimg {
+  height: 100px;
+  object-fit: cover;
+}

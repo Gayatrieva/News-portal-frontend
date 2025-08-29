@@ -1,0 +1,15 @@
+.categoryimg {
+  height: 60px;
+  object-fit: cover;
+}
+
+.latestimg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text-mycolor {
+  color: #7f0000; /* Customize as needed */
+}
+

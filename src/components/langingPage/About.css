@@ -1,0 +1,7 @@
+h2 span {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 960px !important;
+}

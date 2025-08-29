@@ -1,0 +1,47 @@
+.scroll-wrapper {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 16px;
+}
+
+.city-card {
+  min-width: 250px;
+  max-width: 250px;
+  height: 240px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+  padding: 5px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.city-image {
+  height: 140px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.city-name {  
+  font-weight: bold;
+  color: #7f0000;
+  font-size: 18px;
+}
+.color{
+  color: #7f0000;
+}

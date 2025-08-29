@@ -1,0 +1,56 @@
+
+html,body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Or your desired color */
+  min-height: 100vh;
+  
+}
+.categoryimg{
+  height: 50px;
+}
+.latestimg{
+  height: 120px;
+}
+.text-mycolor{
+  color: #7f0000;
+}
+.topnewsimg{
+  height:200px;
+}
+.topnewstext{
+  font-size:12px;
+}
+.topnewscard a{
+  text-decoration: none;
+}
+.bg-color{
+  background-color: #E9F1FA;
+}
+.nav-link{
+  color: #7f0000;
+  
+}
+.edit-profile{
+  min-Height: 50vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.footer{
+  min-height:250px;
+  background-color: black;
+}
+.footerlogo{
+  height:60px;
+}
+.footertext{
+  font-size: 15px;
+}
+.bfooter{
+  height:50px;
+  background:black;
+}
+.my-seccolor{
+  background-color:#ffffffc2;
+}

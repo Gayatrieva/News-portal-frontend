@@ -1,0 +1,11 @@
+.Logo {
+  background-color: #E9F1FA;
+  height: 100px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: Algerian;
+  line-height: 90px;
+}
