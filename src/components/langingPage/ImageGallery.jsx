@@ -25,7 +25,7 @@ const ImageGallery = () => {
   }, [searchTerm, data]);
 
   const fetchData = async () => {
-    const response = await axios.get("http://localhost:9000/api/top-city");
+    const response = await axios.get("https://news-portal-backend-2-d9eg.onrender.com/api/top-city");
     if (response?.data?.code === 200) {
       setData(response?.data?.data);
       setFilteredData(response?.data?.data); // initialize filteredData

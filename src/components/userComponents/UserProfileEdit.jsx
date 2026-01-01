@@ -18,7 +18,7 @@ const USerSchema = yup.object().shape({
 });
 
 const UserProfileEdit = () => {
-  const location=useLocation()
+  const location = useLocation()
   const { register, handleSubmit, setValue, formState: { errors } } = useForm({
     resolver: yupResolver(USerSchema),
   });
@@ -52,7 +52,7 @@ const UserProfileEdit = () => {
       return;
     }
 
-    const response = await axios.put('http://localhost:9000/api/user-update', formData, {
+    const response = await axios.put('https://news-portal-backend-2-d9eg.onrender.com/api/user-update', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
@@ -76,7 +76,7 @@ const UserProfileEdit = () => {
 
   return (
     <>
-     {location?.pathname!=="/" &&  <Navbar/>}
+      {location?.pathname !== "/" && <Navbar />}
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-11">
@@ -94,7 +94,7 @@ const UserProfileEdit = () => {
                     {errors?.name && <p className="pt-1 text-danger">{errors?.name?.message}</p>}
                   </div>
 
-                  
+
                   <div className="col-md-6">
                     <label className="form-label">Your Email</label>
                     <div className="input-group">

@@ -14,7 +14,7 @@ const AdminContactUsList = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:9000/api/get-contact-us');
+      const response = await axios.get('https://news-portal-backend-2-d9eg.onrender.com/api/get-contact-us');
       if (response?.data?.code === 200) {
         setData(response?.data?.data);
       }

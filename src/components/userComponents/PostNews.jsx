@@ -28,7 +28,7 @@ const PostNews = () => {
     const finalObj = { ...data, userId: user?._id };
 
     try {
-      const response = await axios.post('http://localhost:9000/api/add-news', finalObj);
+      const response = await axios.post('https://news-portal-backend-2-d9eg.onrender.com/api/add-news', finalObj);
 
       if (response?.data?.code === 200) {
         Swal.fire({
@@ -87,12 +87,12 @@ const PostNews = () => {
                   </div>
                 </div>
                 <div className="row my-3">
-                    <div className="col-3 pt-2">City</div>
-                    <div className="col-9">
-                      <input type='text' {...register('city')} placeholder='Enter the City Name' className='form-control'/>  
-                      {errors?.city && <p className='text-danger'>{errors?.city?.message}</p>}
-                    </div>
+                  <div className="col-3 pt-2">City</div>
+                  <div className="col-9">
+                    <input type='text' {...register('city')} placeholder='Enter the City Name' className='form-control' />
+                    {errors?.city && <p className='text-danger'>{errors?.city?.message}</p>}
                   </div>
+                </div>
 
                 <div className="row my-3">
                   <div className="col-3 pt-2">Media Type</div>

@@ -14,7 +14,7 @@ function NewsCategory() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:9000/api/top-category');
+      const response = await axios.get('https://news-portal-backend-2-d9eg.onrender.com/api/top-category');
       if (response?.data?.code === 200) {
         setData(response.data.data);
       }
@@ -27,8 +27,8 @@ function NewsCategory() {
     <>
       {location?.pathname !== "/" && <Navbar />}
 
-     
-      <div  className='bg-color'style={{ overflowX: 'hidden',  }}>
+
+      <div className='bg-color' style={{ overflowX: 'hidden', }}>
         <div className="container py-2">
           <p className="text-center fs-3">
             News <b className="text-mycolor">Category</b>

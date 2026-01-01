@@ -9,18 +9,18 @@ const UserAllNewsList = () => {
     fetchData()
   }, [])
 
-  const fetchData = async () => { 
-    const response = await axios.get(`http://localhost:9000/api/all-approved-news`)
+  const fetchData = async () => {
+    const response = await axios.get(`https://news-portal-backend-2-d9eg.onrender.com/api/all-approved-news`)
     if (response?.data?.code == 200) {
       setNewsList(response?.data?.data)
     }
   }
 
-  const showDescription=(des)=>{
- Swal.fire({
-  text:des,
-  icon:"info"
- })
+  const showDescription = (des) => {
+    Swal.fire({
+      text: des,
+      icon: "info"
+    })
   }
 
   return (
@@ -38,10 +38,10 @@ const UserAllNewsList = () => {
                 <th scope="col">City</th>
                 <th scope="col">Media</th>
                 <th scope="col">Description</th>
-              </tr>  
+              </tr>
             </thead>
             <tbody>
-              {newsList?.map((item, ) => {  
+              {newsList?.map((item,) => {
                 return (<>
                   <tr>
                     <th >{item?.title}</th>
@@ -59,13 +59,13 @@ const UserAllNewsList = () => {
                           allowFullScreen=""
                         />
                     }</td>
-                    <td onClick={()=>showDescription(item?.desc)} >{item?.desc?.slice(0,15)}...</td>
+                    <td onClick={() => showDescription(item?.desc)} >{item?.desc?.slice(0, 15)}...</td>
                   </tr>
                 </>)
               })}
             </tbody>
           </table>
-           {newsList?.length==0 && <h3 className='text-center'>No Records Found</h3>}
+          {newsList?.length == 0 && <h3 className='text-center'>No Records Found</h3>}
         </div>
         <div className="col-sm-1"></div>
       </div>

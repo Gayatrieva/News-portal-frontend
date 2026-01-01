@@ -56,7 +56,7 @@
 //         text: response?.data?.message,
 //         icon: "success"
 //       })
-     
+
 //     } else {
 //       Swal.fire({
 //         title: "Profile Update",
@@ -83,7 +83,7 @@
 //                      </div>
 //                      {errors?.name && <p className="pt-1 text-danger">{errors?.name?.message}</p>}
 //                    </div>
-     
+
 //                    {/* Email */}
 //                    <div className="col-md-6">
 //                      <label className="form-label">Your Email</label>
@@ -93,7 +93,7 @@
 //                      </div>
 //                      {errors?.email && <p className="pt-1 text-danger">{errors?.email?.message}</p>}
 //                    </div>
-     
+
 //                    {/* Phone */}
 //                    <div className="col-md-6">
 //                      <label className="form-label">Phone Number</label>
@@ -103,7 +103,7 @@
 //                      </div>
 //                      {errors?.contact && <p className="pt-1 text-danger">{errors?.contact?.message}</p>}
 //                    </div>
-     
+
 //                    {/* Password */}
 //                    <div className="col-md-6">
 //                      <label className="form-label">Password</label>
@@ -113,24 +113,24 @@
 //                      </div>
 //                      {errors?.password && <p className="pt-1 text-danger">{errors?.password?.message}</p>}
 //                    </div>
-     
+
 //                    {/* Country */}
 //                    <div className="col-md-6">
 //                      <label className="form-label">Address</label>
 //                      <input type="text" {...register('address')} className="form-control" placeholder="Address" />
 //                      {errors?.address && <p className="pt-1 text-danger">{errors?.address?.message}</p>}
 //                    </div>
-     
+
 //                    {/* Profile Picture */}
 //                    <div className="col-md-6 mb-4">
 //                      <label className="form-label">Profile Picture</label>
 //                      <div className="input-group">
-     
+
 //                        <input type="file" {...register('profile')} className="form-control" />
 //                      </div>
 //                      {errors?.profile && <p className="pt-1 text-danger">{errors?.profile?.message}</p>}
 //                    </div>
-     
+
 //                    {/* Submit Button */}
 //                    <div className="text-center mt-3 mb-4 ">
 //                      <input type="submit" value="Update" className="btn btn-outline-danger px-4 w-50 mx-2" />
@@ -174,7 +174,7 @@ const EditProfile = () => {
     setValue('email', userData?.email);
     setValue('contact', userData?.contact);
     setValue('address', userData?.address);
-    setValue('password', userData?.password); 
+    setValue('password', userData?.password);
 
   }, [])
 
@@ -199,7 +199,7 @@ const EditProfile = () => {
       })
       return;
     }
-    const response = await axios.put('http://localhost:9000/api/user-update', formData, {
+    const response = await axios.put('https://news-portal-backend-2-d9eg.onrender.com/api/user-update', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
@@ -210,7 +210,7 @@ const EditProfile = () => {
         text: response?.data?.message,
         icon: "success"
       })
-      localStorage.setItem('userInfo',JSON.stringify(response?.data?.data))
+      localStorage.setItem('userInfo', JSON.stringify(response?.data?.data))
 
     } else {
       Swal.fire({

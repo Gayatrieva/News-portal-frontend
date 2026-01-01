@@ -61,7 +61,7 @@ const AllNews = () => {
       confirmButtonText: "Yes, delete it!"
     }).then(async (result) => {
       if (result.isConfirmed) {
-        const response = await axios.post('http://localhost:9000/api/delete-news', { _id });
+        const response = await axios.post('https://news-portal-backend-2-d9eg.onrender.com/api/delete-news', { _id });
         if (response?.data?.code == 200) {
           Swal.fire({
             title: "News Delete",
@@ -69,8 +69,8 @@ const AllNews = () => {
             icon: "success"
           })
           fetchData()
-        }else{
-           Swal.fire({
+        } else {
+          Swal.fire({
             title: "News Delete",
             text: response?.data?.message,
             icon: "error"
@@ -108,18 +108,18 @@ const AllNews = () => {
                   <td>{item?.title}</td>
                   <td>{item?.category}</td>
                   <td>{item?.city}</td>
-                   <td>{
-                      item?.type == "image" ? <img height='60' width='100' src={item?.url} /> :
-                        <iframe
-                          height='60' width='100'
-                          src={item?.url}
-                          title="YouTube video player"
-                          frameBorder={0}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          referrerPolicy="strict-origin-when-cross-origin"
-                          allowFullScreen=""
-                        />
-                    }</td>
+                  <td>{
+                    item?.type == "image" ? <img height='60' width='100' src={item?.url} /> :
+                      <iframe
+                        height='60' width='100'
+                        src={item?.url}
+                        title="YouTube video player"
+                        frameBorder={0}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen=""
+                      />
+                  }</td>
                   <td>{item?.desc?.slice(0, 40)}...</td>
                   <td>
                     <span
@@ -131,9 +131,8 @@ const AllNews = () => {
                   <td>
                     <button
                       onClick={() => handleApproval(item?._id, item?.isApproved)}
-                      className={`btn btn-sm ${
-                        item?.isApproved ? 'btn-outline-danger' : 'btn-outline-success'
-                      }`}
+                      className={`btn btn-sm ${item?.isApproved ? 'btn-outline-danger' : 'btn-outline-success'
+                        }`}
                     >
                       {item?.isApproved ? "Disapprove" : "Approve"}
                     </button>

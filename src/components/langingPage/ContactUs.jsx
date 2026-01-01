@@ -39,7 +39,7 @@ const ContactUs = () => {
   });
 
   const handleContact =async (data) => {
-   const response=await axios.post('http://localhost:9000/api/add-contact-us',data);
+   const response=await axios.post('https://news-portal-backend-2-d9eg.onrender.com/api/add-contact-us',data);
    if(response?.data?.code==200){
      Swal.fire({
       title:"Contact US",

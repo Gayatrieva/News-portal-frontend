@@ -54,7 +54,7 @@ const UserRegister = () => {
     }
 
     const response = await axios.post(
-      "http://localhost:9000/api/user-register",
+      "https://news-portal-backend-2-d9eg.onrender.com/api/user-register",
       formData,
       {
         headers: {

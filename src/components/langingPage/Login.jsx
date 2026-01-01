@@ -29,7 +29,7 @@ const Login = () => {
 
   const handleLogin = async (data) => {
     try {
-      const response = await axios.post('http://localhost:9000/api/login', data);
+      const response = await axios.post('https://news-portal-backend-2-d9eg.onrender.com/api/login', data);
 
       if (response?.data?.code === 200) {
         Swal.fire({
